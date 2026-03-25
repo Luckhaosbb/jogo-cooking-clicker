@@ -1,1 +1,127 @@
-/* Add styles here */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #1e1e1e url('https://orteil.dashnet.org/cookieclicker/img/bg.jpg');
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    background: #222;
+    padding: 5px 10px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    height: 25px; /* Fixed height for the news ticker */
+    box-sizing: border-box;
+}
+
+#news-ticker {
+    font-size: 1em;
+    color: #ffdd77;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.main-content {
+    display: flex;
+    flex-grow: 1;
+    height: calc(100% - 25px); /* Adjust height to account for top bar */
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-container {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+#cps {
+    font-size: 0.5em;
+}
+
+.cookie-container {
+    margin-top: 20px;
+}
+
+#cookie-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+#cookie-btn img {
+    width: 250px;
+    transition: transform 0.1s ease;
+}
+
+#cookie-btn:active img {
+    transform: scale(0.95);
+}
+
+.right-section {
+    flex: 0 0 300px;
+    background: #000 url('https://orteil.dashnet.org/cookieclicker/img/panelVertical.png') repeat-y;
+    padding: 20px;
+    border-left: 2px solid #000;
+    overflow-y: auto;
+}
+
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.upgrade {
+    background: #333 url('https://orteil.dashnet.org/cookieclicker/img/panelHorizontal.png') repeat-x;
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    opacity: 0.5; /* Dim unavailable upgrades */
+}
+
+.upgrade.unlocked {
+    opacity: 1;
+}
+
+.upgrade:hover {
+    background-color: #444;
+}
+
+.upgrade-info h3 {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+}
+
+.upgrade-info p {
+    margin: 5px 0 0;
+    color: #fdd835;
+}
+
+.upgrade-level {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ccc;
+    text-shadow: 1px 1px 2px #000;
+}

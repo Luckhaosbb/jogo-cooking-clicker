@@ -7,6 +7,9 @@
   packages = [
     pkgs.nodejs_22
     pkgs.python3
+    pkgs.android-tools
+    pkgs.firebase-tools
+    pkgs.git
   ];
   # Sets environment variables in the workspace
   env = {};
@@ -15,6 +18,10 @@
     extensions = [
       # "vscodevim.vim"
       "google.gemini-cli-vscode-ide-companion"
+      "dracula-theme.theme-dracula"
+      "esbenp.prettier-vscode"
+      "ms-azuretools.vscode-containers"
+      "ms-azuretools.vscode-docker"
     ];
     # Enable previews and customize configuration
     previews = {
